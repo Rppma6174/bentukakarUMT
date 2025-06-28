@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Video Pembelajaran UMT</title>
     <style>
-* {
+        * {
             margin: 0;
             padding: 0;
             box-sizing: border-box;
@@ -420,20 +420,20 @@
             font-size: 14px;
         }
         
-        @media (max-width: 1024px) {
-            .content-wrapper {
-                grid-template-columns: 1fr;
-                gap: 20px;
-            }
-            
-            .sidebar {
-                order: -1;
-            }
-            
-            .progress-card, .related-videos {
-                padding: 20px;
-            }
-        }
+@media (max-width: 1024px) {
+    .content-wrapper {
+        grid-template-columns: 1fr;
+        gap: 20px;
+    }
+    
+    .video-section {
+        order: -1;  /* <-- TAMBAHKAN BARIS INI */
+    }
+    
+    .progress-card, .related-videos {
+        padding: 20px;
+    }
+}
         
         @media (max-width: 768px) {
             .container {
@@ -659,7 +659,6 @@
         font-size: 13px !important;
     }
 }
-
     </style>
 </head>
 <body>
@@ -672,14 +671,14 @@
                 <span class="breadcrumb-separator">></span>
                 <div class="dropdown-container">
                     <div class="dropdown-trigger" onclick="toggleDropdown()">
-                        <span id="currentClass">Kelas Bentuk Akar</span>
+                        <span id="currentClass">Kelas Nilai Mutlak</span>
                         <span class="dropdown-arrow">▼</span>
                     </div>
                     <div class="dropdown-menu" id="classDropdown">
-                        <a href="https://sites.google.com/view/limit-umt/limit" class="dropdown-item active" target="_blank">Limit</a>
+                        <a href="https://sites.google.com/view/limit-umt/limit" class="dropdown-item" target="_blank">Limit</a>
                         <a href="https://sites.google.com/view/trigonometri-umt/trigonometri" class="dropdown-item" target="_blank">Trigonometri</a>
                         <a href="https://sites.google.com/view/bentuk-akar-umt/video-pembelajaran" class="dropdown-item" target="_blank">Bentuk Akar</a>
-                        <a href="https://sites.google.com/view/nilai-mutlak-umt/nilai-mutlak" class="dropdown-item" target="_blank">Nilai Mutlak</a>
+                        <a href="https://sites.google.com/view/nilai-mutlak-umt/nilai-mutlak" class="dropdown-item active" target="_blank">Nilai Mutlak</a>
                     </div>
                 </div>
             </div>
@@ -778,16 +777,40 @@ const videoData = {
     'matematika-10': [
         {
             id: 'limit-dasar',
-            title: 'Bentuk Akar - Pengertian',
-            youtubeId: 'Nd0hy5uFwOE',
-            duration: '08:28',
-            description: 'Video ini membahas pemahaman dasar tentang pengertian bentuk akar sebagai pengantar untuk memasuki bentuk akar lebih lanjut. Materi disajikan untuk membangun pemahaman yang kuat tentang nilai mutlak secara konseptual dan visual.',
-            tags: ['Matematika', 'Kalkulus', 'Limit', 'Dasar'],
+            title: 'Nilai Mutlak - Definisi',
+            youtubeId: 'zwth9824dhU?si=l-AjS2KOJZRx74Rs',
+            duration: '00:53',
+            description: 'Video ini membahas pemahaman dasar tentang definisi limit. Materi disajikan untuk membangun pemahaman yang kuat tentang nilai mutlak secara konseptual dan visual.',
+            tags: ['Matematika', 'Nilai Mutlak', 'Dasar'],
             pdfUrl: '/notes/limit-dasar.pdf',
             completed: false,
-            thumbnail:'Pengertian Bentuk Akar.png',
-            quizUrl: '#',
+            thumbnail:'Thumb Definisi Nilai Mutlak.png',
+            quizUrl: 'https://forms.gle/o7RuibY5TTRbFur99',
         },
+        {
+            id: 'limit-dasar',
+            title: 'Nilai Mutlak - Representasi Geometri',
+            youtubeId: 'MxhGHR0zuuo?si=1WJ8LiXWZfesvzEH',
+            duration: '03:32',
+            description: 'Video ini membahas pemahaman dasar tentang representasi geometri dari nilai mutlak. Materi disajikan untuk membangun pemahaman yang kuat tentang nilai mutlak secara konseptual dan visual.',
+            tags: ['Matematika', 'Nilai Mutlak', 'Dasar'],
+            pdfUrl: '/notes/limit-dasar.pdf',
+            completed: false,
+            thumbnail:'Thumb Representasi Geometri Dari Nilai Mutlak.png',
+            quizUrl: 'https://forms.gle/AuWMFTjCp6xMYpgF9',
+        },
+        {
+            id: 'limit-dasar',
+            title: 'Nilai Mutlak - Sifat - Sifat Dasar',
+            youtubeId: 'CVrjAQdhFFg?si=KQcOiD1yznc-jbqt',
+            duration: '01:26',
+            description: 'Video ini membahas pemahaman dasar tentang sifat sifat dasar nilai mutlak. Materi disajikan untuk membangun pemahaman yang kuat tentang nilai mutlak secara konseptual dan visual.',
+            tags: ['Matematika', 'Nilai Mutlak', 'Dasar'],
+            pdfUrl: '/notes/limit-dasar.pdf',
+            completed: false,
+            thumbnail:'sifat dasar nilai mutlak.png',
+            quizUrl: 'https://forms.gle/oCv3anCAakv31E9w8',
+        }
     ]
 };
 
